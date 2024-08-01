@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/css/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Inicio</title>
+    <style>
+        body {
+            background-color: #000000;
+            background-image: linear-gradient(rgba(5, 5, 5, 0.5), rgba(0, 0, 0, 0.5)), url("https://media.istockphoto.com/id/1135308279/es/foto/muchos-rollos-textiles-de-colores-azules-blancos-y-anaranjados-apilados-uno-sobre-el-otro.jpg?s=612x612&w=0&k=20&c=qcuNeU5KNcTVYnlwmmysoAoLzuwi4tiOyby9JnwDi70=");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff; /* Cambiado a blanco */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0; /* Elimina espacio en la parte superior */
+        }
+
+        .header .icons {
+            display: none;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            margin: 0; /* Elimina espacio en la parte superior */
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .pie-pagina {
+            width: 100%;
+            background-color: #2c547d; /* Color azul más oscuro */
+            color: #fff;
+            padding-bottom: 1rem; /* Añadido para separación en la parte inferior */
+        }
+
+        .pie-pagina .grupo-1 {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 50px;
+            padding: 45px 0;
+        }
+
+        .pie-pagina .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .pie-pagina .box figure img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .pie-pagina .box h2 {
+            margin-bottom: 25px;
+            font-size: 20px;    
+        }
+
+        .pie-pagina .box p {
+            margin-bottom: 10px;
+            color: #efefef;
+        }
+
+        .pie-pagina .box .red-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .pie-pagina .box .red-social a {
+            color: #fff;
+            font-size: 25px;
+            transition: color 0.3s;
+        }
+
+        .pie-pagina .box .red-social a:hover {
+            color: #00acee; /* Cambiar el color al hacer hover */
+        }
+
+        .pie-pagina .grupo-2 {
+            background-color: #223b5b;
+            padding: 11px 10px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .pie-pagina .grupo-2 small {
+            font-size: 15px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .pie-pagina .grupo-1 {
+                grid-template-columns: 1fr;
+                grid-gap: 30px;
+                padding: 35px 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">logo</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bxl-xing' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="#" style="--i:0;">Home</a>
+            <a href="#" style="--i:1;">Contact</a>
+            <a href="#" style="--i:2;">About us</a>
+            <a href="#" style="--i:3;">Login</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Bienvenido a Nuestra Tienda</h1>
+        <p>
+            En nuestra tienda de confecciones textiles, nos enorgullecemos de ofrecer una amplia variedad de productos de alta calidad. 
+            Desde telas exóticas hasta accesorios únicos, nuestro objetivo es satisfacer todas tus necesidades textiles. 
+            Ya sea que estés buscando materiales para un nuevo proyecto o simplemente explorando nuestras últimas colecciones, 
+            estamos aquí para ayudarte a encontrar exactamente lo que necesitas. ¡Gracias por visitarnos!
+        </p>
+    </div>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="/Assets/icons/WhatsApp_Image_2024-07-30_at_11.21.03_PM-removebg-preview.png" alt="Logo CTLY">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed lacus id risus efficitur faucibus.</p> 
+                <p>Donec vitae velit ac leo volutpat hendrerit. Curabitur feugiat nibh quis nulla suscipit, nec iaculis eros faucibus.</p> 
+            </div>
+            <div class="box">
+                <h2>SÍGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 <b>Confecciones Textiles la Y</b> - Todos los derechos reservados</small>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Inventario de Telas</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+        
+        :root {
+            --blanco: #e0e0e0;
+            --azul-opacidad: #3c6fa3;
+            --bg-menu: #003053;
+            --bg-body: #c7e1ff;
+            --icon-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--blanco);
+            background-color: #f4f4f4;
+            display: flex;
+        }
+
+        .menu-dashboard {
+            width: 300px;
+            height: 100vh;
+            background: var(--bg-menu);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: width .3s ease;
+            position: relative;
+        }
+
+        .top-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .top-menu .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-menu .logo img {
+            width: 40px;
+            transition: width .3s ease;
+        }
+
+        .top-menu .logo span {
+            font-size: 20px;
+            margin-left: 20px;
+            color: #fff;
+        }
+
+        .top-menu .toggle {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .top-menu .toggle i {
+            font-size: 35px;
+            color: #fff;
+        }
+
+        .menu {
+            margin-top: 20px;
+        }
+
+        .enlace {
+            width: 100%;
+            padding: 20px 0 20px 17px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all .3s ease;
+            color: #fff;
+        }
+
+        .enlace:hover {
+            background: var(--azul-opacidad);
+        }
+
+        .enlace i {
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .enlace span {
+            opacity: 1;
+            transition: opacity .3s ease;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-around;
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        .social-media i {
+            font-size: 25px;
+            color: var(--icon-color);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .social-media i:hover {
+            color: #1da1f2; /* Color más claro para resaltar al pasar el mouse */
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            margin: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h1, .content h2, .content h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .input-search {
+            display: inline-block;
+            padding: 0.75rem 1rem;
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 70%;
+            font-size: 16px;
+            margin-right: 1rem;
+        }
+
+        .filter-button {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--azul-opacidad);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .filter-button:hover {
+            background-color: #345a80;
+        }
+
+        .add-button {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--azul-opacidad);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            margin: 2rem auto;
+            width: 200px;
+        }
+
+        .add-button:hover {
+            background-color: #345a80;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        table th, table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+            color: #333;
+        }
+
+        table th {
+            background-color: var(--azul-opacidad);
+            color: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-dashboard">
+        <div>
+            <div class="top-menu">
+                <div class="logo">
+                    <img src="/Assets/icons/WhatsApp_Image_2024-07-30_at_11.21.03_PM-removebg-preview.png" alt="">
+                    <span>Confecciones Textiles la Y</span>
+                </div>
+                <div class="toggle">
+                    <i class='bx bx-menu' id="menu-icon"></i>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="enlace">
+                    <i class="bx bx-grid-alt"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-home"></i>
+                    <span>Inicio</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-collection"></i>
+                    <span>Inventario Telas</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-receipt"></i>
+                    <span>Inventario Pedidos</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-user"></i>
+                    <span>Proveedores</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-file"></i>
+                    <span>Factura</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-log-out"></i>
+                    <span>Cerrar Sesión</span>
+                </div>
+            </div>
+        </div>
+        <div class="social-media">
+            <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://youtube.com" target="_blank"><i class='bx bxl-youtube'></i></a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Hola Administrador</h2>
+        <h3>Bienvenido al sistema de gestión de inventarios</h3>
+        <h1>Inventario de Telas</h1>
+        
+        <div class="button-container">
+            <input type="text" class="input-search" placeholder="Buscar Tela...">
+            <a href="#" class="filter-button" onclick="ordenarTabla()">A-Z</a>
+        </div>
+
+        <table id="inventarioTabla">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Color</th>
+                    <th>Cantidad</th>
+                    <th>Proveedor</th>
+                    <th>Precio</th>
+                    <th>Fecha de Adquisición</th>
+                    <th>Ubicación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Algodón</td>
+                    <td>Natural</td>
+                    <td>Blanco</td>
+                    <td>50</td>
+                    <td>Textiles S.A.</td>
+                    <td>$10/m</td>
+                    <td>01/01/2024</td>
+                    <td>Almacén A1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Seda</td>
+                    <td>Natural</td>
+                    <td>Rojo</td>
+                    <td>30</td>
+                    <td>Finos Textiles</td>
+                    <td>$20/m</td>
+                    <td>05/02/2024</td>
+                    <td>Almacén B3</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Poliéster</td>
+                    <td>Sintético</td>
+                    <td>Azul</td>
+                    <td>70</td>
+                    <td>Industrias Unidas</td>
+                    <td>$5/m</td>
+                    <td>10/03/2024</td>
+                    <td>Almacén C2</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Lino</td>
+                    <td>Natural</td>
+                    <td>Verde</td>
+                    <td>40</td>
+                    <td>Textiles Premium</td>
+                    <td>$15/m</td>
+                    <td>12/04/2024</td>
+                    <td>Almacén A2</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Nylon</td>
+                    <td>Sintético</td>
+                    <td>Negro</td>
+                    <td>60</td>
+                    <td>Fabricantes XYZ</td>
+                    <td>$8/m</td>
+                    <td>20/05/2024</td>
+                    <td>Almacén B1</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Rayón</td>
+                    <td>Sintético</td>
+                    <td>Amarillo</td>
+                    <td>55</td>
+                    <td>Industrias Unidas</td>
+                    <td>$7/m</td>
+                    <td>30/06/2024</td>
+                    <td>Almacén C3</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Denim</td>
+                    <td>Natural</td>
+                    <td>Azul</td>
+                    <td>80</td>
+                    <td>Textiles Denim Co.</td>
+                    <td>$12/m</td>
+                    <td>15/07/2024</td>
+                    <td>Almacén A3</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Franela</td>
+                    <td>Natural</td>
+                    <td>Gris</td>
+                    <td>45</td>
+                    <td>Fabricantes XYZ</td>
+                    <td>$9/m</td>
+                    <td>25/07/2024</td>
+                    <td>Almacén B2</td>
+                </tr>
+                <!-- Más filas de ejemplo pueden añadirse aquí -->
+            </tbody>
+        </table>
+
+        <a href="#" class="add-button">Añadir Tela</a>
+    </div>
+
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            document.querySelector('.menu-dashboard').classList.toggle('open');
+        });
+
+        function ordenarTabla() {
+            let table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("inventarioTabla");
+            switching = true;
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[1];
+                    y = rows[i + 1].getElementsByTagName("TD")[1];
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
