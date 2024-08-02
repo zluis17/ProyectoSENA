@@ -1,0 +1,153 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1E5393;
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+    width: 100px;
+    height: auto;
+}
+
+.sidebar .menu {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.sidebar .menu li {
+    padding: 30px;
+    text-align: center;
+}
+
+.sidebar .menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar .menu li a:hover {
+    background-color: #8a8989c9;
+    width: 160px;
+    height: 35px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.main-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://fashionunited.com/r/fit=cover,format=auto,gravity=center,height=926,quality=70,width=1388/https://static.fashionunited.com/201710/ttejidossostenibles1.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300%;
+    max-width: 500px;
+    padding: 20px;
+    margin-top: 3%;
+    margin-left: 170px;
+}
+
+.form-container {
+    padding-top: 50px; 
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #000000;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #2b337f;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-content: center;
+    width: 120px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+}
+.o a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+button:hover {
+    background-color: #1E5393;
+}

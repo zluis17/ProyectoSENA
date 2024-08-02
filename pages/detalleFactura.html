@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/css/detalleFactura.css">
+    <title>Detalle de Factura</title>
+</head>
+<body>
+    <div class="sidebar">
+            <img src="logo.png" alt="CTLY Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="telas.html">Stock de telas</a></li>
+                    <li><a href="pedidos.html">Stock de pedidos</a></li>
+                    <li><a href="proveedores.html">Proveedores</a></li>
+                    <li><a href="factura.html">Factura</a></li>
+                    <li><a href="Home.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div class="dashboard-container">
+        <div class="dashboard">
+            <h1>Detalle de Factura</h1>
+            <div class="invoice-meta">
+                <p><strong>Factura #:</strong> 001</p>
+                <p><strong>Fecha:</strong> 01/08/2024</p>
+                <div>    
+                    <button class="add-button"><a class="o" href="factura.html">Volver</a></button>
+                </div>
+            </div>
+            <table class="items">
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producto A</td>
+                        <td>2</td>
+                        <td>$50.00</td>
+                        <td>$100.00</td>
+                    </tr>
+                    <tr>
+                        <td>Producto B</td>
+                        <td>1</td>
+                        <td>$30.00</td>
+                        <td>$30.00</td>
+                    </tr>
+                    <tr>
+                        <td>Producto C</td>
+                        <td>3</td>
+                        <td>$20.00</td>
+                        <td>$60.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="total-label">Subtotal</td>
+                        <td>$190.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="total-label">IVA (10%)</td>
+                        <td>$19.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="total-label">Total</td>
+                        <td>$209.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <footer class="footer">
+                <p>Recuerda verificar el estado de la factura</p>
+            </footer>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
