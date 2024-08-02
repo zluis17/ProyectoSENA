@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    display: flex;
+    width: 60%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left {
+    background-color: #2B4B7F;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    max-width: 80%;
+  }
+  
+  .right {
+    flex: 2;
+    padding: 20px;
+    position: relative;
+    background-image: url("https://fashionunited.com/r/fit=cover,format=auto,gravity=center,height=926,quality=70,width=1388/https://static.fashionunited.com/201710/ttejidossostenibles1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+  
+  .right h2, .right form {
+    position: relative;
+    z-index: 2;
+  }
+  
+  h2 {
+    color: #2B4B7F;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    color: #1A1A1A;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #1A1A1A;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #ccc;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2B4B7F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1F355B;
+  }
+  
+  
+  
+  
+  

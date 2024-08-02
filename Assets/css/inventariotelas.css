@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  form {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #2E3A87;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2E3A87;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .sidebar {
+    background-color: #2E3A87;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo img {
+    max-width: 200px;
+    margin-bottom: 50px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav ul li {
+    margin: 10px 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    position: relative;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzn4Pn-1HLfi8oB9c9nedrXOpJEve9l_eGdg&s");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .content h1, .content table {
+    position: relative;
+    z-index: 2;
+  }
+  
+  h1 {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: #1A1A1A;
+  }
+  
+  table {
+    width: auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #1A1A1A;
+  }
+  
+  td {
+    font-size: 16px;
+    background-color: #f2f2f2;
+    color: #1A1A1A;
+  }
+  

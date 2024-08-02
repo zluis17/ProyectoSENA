@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    display: flex;
+    width: 700px; 
+    height: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-panel, .right-panel {
+    width: 50%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-panel {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .left-panel .logo {
+    width: 150px;
+    margin-bottom: 30px;
+  }
+  
+  .right-panel {
+    background-color: #e6e6e6;
+    background-image: url("https://fashionunited.com/r/fit=cover,format=auto,gravity=center,height=926,quality=70,width=1388/https://static.fashionunited.com/201710/ttejidossostenibles1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .right-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad aquí */
+    z-index: 1;
+  }
+  
+  .right-panel h2, .right-panel form {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .right-panel h2 {
+    margin-bottom: 20px;
+    color: #003366;
+  }
+  
+  .form-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .form-group2 {
+    padding-bottom: 20px;
+  }
+  
+  .form-group input {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+  }
+  
+  .form-group input[type="email"], .form-group input[type="text"], .form-group input[type="password"] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #002244;
+  }
+  
+  
