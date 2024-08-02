@@ -1,27 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 body {
-    min-height: 70vh;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(/assets/img/contact.avif);
-    background-position: center center;
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/img/proveedor.jpeg);
+    background-position:  center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin: 80px;
-
 }
 
 form{
-    padding: 50px 80px 85px 55px;
+    padding: 50px 55px 85px 55px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 2);
     border-radius: 20px;
     text-align: center;
     width: 340px;
-    background-color: #D9D9D9;
-    
+    background-color: #fff;
+    margin: 50px 300px;
 }
 
 .input-group {
@@ -29,12 +24,6 @@ form{
     flex-direction: column;
     text-align: left;
 }
-div{
-  display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
 
 h2 {
     color:black;
@@ -69,9 +58,6 @@ input{
     color: black;
     outline: none;
 }
-
-
-
 button{
     padding: 17px 10px;
     border-radius: 10px;

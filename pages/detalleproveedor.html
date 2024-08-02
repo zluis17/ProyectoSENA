@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/Assets/css/detalleproveedor.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Detalle proveedor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+        
+        :root {
+            --blanco: #e0e0e0;
+            --azul-opacidad: #3c6fa3;
+            --bg-menu: #003053;
+            --bg-body: #c7e1ff;
+            --icon-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--blanco);
+            background-color: #f4f4f4;
+            display: flex;
+        }
+
+        .menu-dashboard {
+            width: 300px;
+            height: 100vh;
+            background: var(--bg-menu);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: width .3s ease;
+            position: relative;
+        }
+
+        .top-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .top-menu .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-menu .logo img {
+            width: 40px;
+            transition: width .3s ease;
+        }
+
+        .top-menu .logo span {
+            font-size: 20px;
+            margin-left: 20px;
+            color: #fff;
+        }
+
+        .top-menu .toggle {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .top-menu .toggle i {
+            font-size: 35px;
+            color: #fff;
+        }
+
+        .menu {
+            margin-top: 20px;
+        }
+
+        .enlace {
+            width: 100%;
+            padding: 20px 0 20px 17px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all .3s ease;
+            color: #fff;
+        }
+
+        .enlace:hover {
+            background: var(--azul-opacidad);
+        }
+
+        .enlace i {
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .enlace span {
+            opacity: 1;
+            transition: opacity .3s ease;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-around;
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        .social-media i {
+            font-size: 25px;
+            color: var(--icon-color);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .social-media i:hover {
+            color: #1da1f2; /* Color más claro para resaltar al pasar el mouse */
+        }
+        .content{
+            height: 400px;
+        }      
+    </style>
+</head>
+<body>
+    <div class="menu-dashboard">
+        <div>
+            <div class="top-menu">
+                <div class="logo">
+                    <img src="/Assets/icons/WhatsApp_Image_2024-07-30_at_11.21.03_PM-removebg-preview.png" alt="">
+                    <span>Confecciones Textiles la Y</span>
+                </div>
+                <div class="toggle">
+                    <i class='bx bx-menu' id="menu-icon"></i>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="enlace">
+                    <i class="bx bx-grid-alt"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-home"></i>
+                    <span>Inicio</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-collection"></i>
+                    <span>Inventario Telas</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-receipt"></i>
+                    <span>Inventario Pedidos</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-user"></i>
+                    <span>Proveedores</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-file"></i>
+                    <span>Factura</span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-log-out"></i>
+                    <span>Cerrar Sesión</span>
+                </div>
+            </div>
+        </div>
+        <div class="social-media">
+            <a href="https://twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://instagram.com" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://youtube.com" target="_blank"><i class='bx bxl-youtube'></i></a>
+        </div>
+    </div>
+    <main class="content">
+        <section class="provider-detail">
+            <h2>Información del Proveedor</h2>
+            <div class="detail-group">
+                <label>Nombre:</label>
+                <span id="provider-name">Textiles S.A.</span>
+            </div>
+            <div class="detail-group">
+                <label>Correo:</label>
+                <span id="provider-email">contact@textiles.com</span>
+            </div>
+            <div class="detail-group">
+                <label>Teléfono:</label>
+                <span id="provider-phone">+ 3445670890</span>
+            </div>
+            <div class="detail-group">
+                <label>Dirección:</label>
+                <span id="provider-address">Calle 123, Bogota</span>
+            </div>
+        </section>
+        <section class="actions-section">
+            <button id="edit-button">Editar</button>
+            <button id="delete-button">Eliminar</button>
+            <button id="back-button">Volver</button>
+        </section>
+    </main>
+   
+
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            document.querySelector('.menu-dashboard').classList.toggle('open');
+        });
+
+        function ordenarTabla() {
+            let table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("inventarioTabla");
+            switching = true;
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[1];
+                    y = rows[i + 1].getElementsByTagName("TD")[1];
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
