@@ -1,4 +1,315 @@
-<!DOCTYPE html><html><head><link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" /><link href="/assets/css/factura.css" rel="stylesheet" /><title>Document</title></head><body><div class="v73_2301"><div class="v73_2302"><div class="v73_2303"><span class="v73_2304">Task</span><span class="v73_2305">Factura Uniforme</span><span class="v73_2306">N°</span><span class="v73_2389">Fecha</span></div><div class="v73_2307"><span class="v73_2308">FIG-123</span><span class="v73_2309">Factura Chaqueta</span><div class="v73_2310"><div class="v73_2311"><span class="v73_2312">L34234234</span></div></div><div class="v73_2391"><span class="v73_2392">DD/MM/AA</span></div><div class="v73_2313"></div></div><div class="v73_2314"><span class="v73_2315">FIG-122</span><span class="v73_2316">Factura Pantalon</span><div class="v73_2317"><div class="v73_2318"><span class="v73_2319">H34234234</span></div></div><div class="v73_2393"><span class="v73_2394">DD/MM/AA</span></div></div><div class="v73_2320"><span class="v73_2321">FIG-121</span><span class="v73_2322">Factura Camisa</span><div class="v73_2323"><div class="v73_2324"><span class="v73_2325">G4534528934</span></div></div><div class="v73_2395"><span class="v73_2396">DD/MM/AA</span></div></div><div class="v73_2326"><span class="v73_2327">FIG-121</span><span class="v73_2328">Factura Pantaloneta</span><div class="v73_2329"><div class="v73_2330"><span class="v73_2331">P784238794782</span></div></div><div class="v73_2397"><span class="v73_2398">DD/MM/AA</span></div></div></div><div class="v73_2332"><div class="v73_2333"><div class="v73_2334"><div class="v73_2335"><div class="v73_2336"></div><div class="v73_2337"></div><div class="v73_2338"></div><div class="v73_2339"></div><div class="v73_2340"></div><div class="v73_2341"></div></div></div><div class="v73_2342"><div class="v73_2343"><div class="v73_2344"></div><div class="v73_2345"></div><div class="v73_2346"></div><div class="v73_2347"></div></div></div><div class="v73_2348"><div class="v73_2349"><div class="v73_2350"></div><div class="v73_2351"></div><div class="v73_2352"></div><div class="v73_2353"></div></div></div><div class="v73_2354"><span class="v73_2355">Popular</span></div><div class="v73_2356"><span class="v73_2357">New Releases</span></div></div><div class="v73_2358"><div class="v73_2359"><div class="v73_2360"></div></div><span class="v73_2361">Filtrar
-</span></div><div class="v73_2362"><div class="v73_2363"><div class="v73_2364"></div><div class="v73_2365"></div></div><span class="v73_2366">Buscar Factura</span></div><span class="v73_2367">Administrador
-</span></div><div class="v73_2368"><div class="v73_2369"><div class="v73_2370"><span class="v73_2371">Settings</span><div class="v122_28"></div></div><div class="v73_2372"><div class="v73_2373"><div class="v73_2374"></div><div class="v73_2375"></div></div><span class="v73_2376">inicio
-</span></div><div class="v73_2382"><div class="v73_2383"><div class="v73_2384"></div><div class="v73_2385"></div></div><span class="v73_2386">Facturación</span></div></div><span class="v73_2387">¿Ayuda?</span><div class="v73_2388"></div></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/css/factura.css">
+    <title>Lista de facturas</title>
+</head>
+<style>
+     :root {
+            --blanco: #e0e0e0;
+            --azul-opacidad: #3c6fa3;
+            --bg-menu: #003053;
+            --bg-body: #c7e1ff;
+            --icon-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--blanco);
+            background-color: #f4f4f4;
+            display: flex;
+            background-image: url('../Assets/img/proveedor.jpeg');
+            background-repeat: no-repeat;
+        }
+
+        .menu-dashboard {
+            width: 300px;
+            height: 100vh;
+            background: var(--bg-menu);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: width .3s ease;
+            position: relative;
+        }
+
+        .top-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .top-menu .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-menu .logo img {
+            width: 40px;
+            transition: width .3s ease;
+        }
+
+        .top-menu .logo span {
+            font-size: 20px;
+            margin-left: 20px;
+            color: #fff;
+        }
+
+        .top-menu .toggle {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .top-menu .toggle i {
+            font-size: 35px;
+            color: #fff;
+        }
+
+        .menu {
+            margin-top: 20px;
+        }
+
+        .enlace {
+            width: 100%;
+            padding: 20px 0 20px 17px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all .3s ease;
+            color: #fff;
+        }
+
+        .enlace:hover {
+            background: var(--azul-opacidad);
+        }
+
+        .enlace i {
+            margin-right: 20px;
+            font-size: 20px;
+        }
+
+        .enlace span {
+            opacity: 1;
+            transition: opacity .3s ease;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-around;
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        .social-media i {
+            font-size: 25px;
+            color: var(--icon-color);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .social-media i:hover {
+            color: #1da1f2; 
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            margin: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h1, .content h2, .content h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .input-search {
+            display: inline-block;
+            padding: 0.75rem 1rem;
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 70%;
+            font-size: 16px;
+            margin-right: 1rem;
+        }
+
+        .filter-button {
+            padding: 0.75rem 1.5rem;
+            background-color: var(--azul-opacidad);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .filter-button:hover {
+            background-color: #345a80;
+        }
+
+        .add-button {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--azul-opacidad);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            margin: 2rem auto;
+            width: 200px;
+        }
+
+        .add-button:hover {
+            background-color: #345a80;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        table th, table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+            color: #333;
+        }
+
+        table th {
+            background-color: var(--azul-opacidad);
+            color: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .enlace a{
+            color: #fff;
+            text-decoration: none;
+        }
+</style>
+<body>
+    <div class="menu-dashboard">
+        <div>
+            <div class="top-menu">
+                <div class="logo">
+                    <img src="../Assets/icons/WhatsApp_Image_2024-07-30_at_11.21.03_PM-removebg-preview.png" alt="">
+                    <span>Confecciones Textiles la Y</span>
+                </div>
+                <div class="toggle">
+                    <i class='bx bx-menu' id="menu-icon"></i>
+                </div>
+            </div>
+            <div class="menu">
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-home"></i>
+                    <span><a href="index.html">Inicio</a></span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-collection"></i>
+                    <span><a href="listaTelas.html">Telas</a></span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-receipt"></i>
+                    <span><a href="pedidos.html">Pedidos</a></span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-user"></i>
+                    <span><a href="listaproveedores.html">Proveedores</a></span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-file"></i>
+                    <span><a href="factura.html">Factura</a></span>
+                </div>
+                <div class="enlace">
+                    <i class="bx bx-log-out"></i>
+                    <span><a href="login.html">login</a></span>
+                </div>
+            </div>
+        </div>
+    <div class="main-content">
+        <h1>FACTURAS</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>TIPO</th>
+                    <th>FECHA</th>
+                    <th>DETALLE</th>
+                </tr>
+            </thead>
+            <tbody id="inventoryTable">
+                <tr>
+                    <td>Proveedor</td>
+                    <td>29/07/2024</td>
+                    <td><button class="o"><a href="detalleFactura.html">Detalle</a</button></td>
+                </tr>
+                <tr>
+                    <td>Ciente</td>
+                    <td>29/06/2024</td>
+                    <td><button class="o"><a href="detalleFactura.html">Detalle</a</button></td>
+                </tr>
+                <tr>
+                    <td>Proveedor</td>
+                    <td>29/05/2024</td>
+                    <td><button class="o"><a href="detalleFactura.html">Detalle</a</button></td>
+                </tr>
+                <tr>
+                    <td>Ciente</td>
+                    <td>29/04/2024</td>
+                    <td><button class="o"><a href="detalleFactura.html">Detalle</a</button></td>
+                </tr>
+                <tr>
+                    <td>Ciente</td>
+                    <td>29/03/2024</td>
+                    <td><button class="o"><a href="detalleFactura.html">Detalle</a</button></td>
+                </tr>
+                <tr>
+                    <td>Proveedor</td>
+                    <td>29/02/2024</td>
+                    <td><button class="o"><a href="detalleFactura.html">Detalle</a</button></td>
+                </tr>
+                <tr>
+                    <td>Proveedor</td>
+                    <td>29/01/2024</td>
+                    <td><button class="o"><a href="detalleFactura.html">Detalle</a</button></td>
+                </tr>
+            </tbody>
+        </table>      
+        <div>
+            <button class="add-button"><a href="rregistroFactura.html">Agregar Factura</a></button>
+            <button class="add-button"><a href="actualizarFactura.html">Actualizar Factura</a></button>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

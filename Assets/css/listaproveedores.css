@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(/assets/img/proveedor.jpeg);
+    background-image: url(../img/proveedor.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,6 +53,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     padding: 5px 0;
+    color: black;
 }
 
 .detail-group label {

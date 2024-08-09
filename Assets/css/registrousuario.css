@@ -102,6 +102,10 @@
     border-radius: 5px;
     cursor: pointer;
   }
+  .boton a{
+    color: #fff;
+    text-decoration: none;
+  }
   
   button:hover {
     background-color: #002244;

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="../Assets/css/detalleproveedor.css">
+    <title>Inventario de Materiales</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Detalle proveedor</title>
+    <link rel="stylesheet" href="../Assets/css/inventariotelas.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
         
@@ -128,16 +127,13 @@
         .social-media i:hover {
             color: #1da1f2;
         }
-        .content{
-            height: 400px;
-        }      
+        
         .enlace a{
             color: #fff;
             text-decoration: none;
         } 
+        
     </style>
-</head>
-<body>
     <div class="menu-dashboard">
         <div>
             <div class="top-menu">
@@ -179,67 +175,122 @@
             <a href="https://youtube.com" target="_blank"><i class='bx bxl-youtube'></i></a>
         </div>
     </div>
-    <main class="content">
-        <section class="provider-detail">
-            <h2>Información del Proveedor</h2>
-            <div class="detail-group">
-                <label>Nombre:</label>
-                <span id="provider-name">Textiles S.A.</span>
-            </div>
-            <div class="detail-group">
-                <label>Correo:</label>
-                <span id="provider-email">contact@textiles.com</span>
-            </div>
-            <div class="detail-group">
-                <label>Teléfono:</label>
-                <span id="provider-phone">+ 3445670890</span>
-            </div>
-            <div class="detail-group">
-                <label>Dirección:</label>
-                <span id="provider-address">Calle 123, Bogota</span>
-            </div>
-        </section>
-        <section class="actions-section">
-            <button id="edit-button">Editar</button>
-            <button id="delete-button">Eliminar</button>
-            <button id="back-button">Volver</button>
-        </section>
-    </main>
-   
-
-    <script>
-        document.getElementById('menu-icon').addEventListener('click', function () {
-            document.querySelector('.menu-dashboard').classList.toggle('open');
-        });
-
-        function ordenarTabla() {
-            let table, rows, switching, i, x, y, shouldSwitch;
-            table = document.getElementById("inventarioTabla");
-            switching = true;
-            while (switching) {
-                switching = false;
-                rows = table.rows;
-                for (i = 1; i < (rows.length - 1); i++) {
-                    shouldSwitch = false;
-                    x = rows[i].getElementsByTagName("TD")[1];
-                    y = rows[i + 1].getElementsByTagName("TD")[1];
-                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                        shouldSwitch = true;
-                        break;
-                    }
-                }
-                if (shouldSwitch) {
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                    switching = true;
-                }
-            }
-        }
-    </script>
+</head>
+<body>
+    <div class="contents">
+        <div class="content">
+            <h1>Inventario de pedidos:</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hilos</th>
+                        <th>Modelo</th>
+                        <th>Talla</th>
+                        <th>N°</th>
+                        <th>Bordado</th>
+                        <th>Estampado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Algodón</td>
+                        <td>Uniforme</td>
+                        <td>M</td>
+                        <td>30</td>
+                        <td>sí</td>
+                        <td>no</td>
+                    </tr>
+                    <tr>
+                        <td>Lana</td>
+                        <td>Camiseta</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>sí</td>
+                        <td>sí</td>
+                    </tr>
+                    <tr>
+                        <td>Lana</td>
+                        <td>Pantaloneta</td>
+                        <td>S</td>
+                        <td>15</td>
+                        <td>no</td>
+                        <td>sí</td>
+                    </tr>
+                    <tr>
+                        <td>Algodón</td>
+                        <td>Camiseta</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>sí</td>
+                        <td>no</td>
+                    </tr>
+                    <tr>
+                        <td>Algodón</td>
+                        <td>Camiseta</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>sí</td>
+                        <td>sí</td>
+                    </tr>
+                    <tr>
+                        <td>Algodón</td>
+                        <td>Falda</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>no</td>
+                        <td>sí</td>
+                    </tr>
+                    <tr>
+                        <td>Algodón</td>
+                        <td>Pantaloneta</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>no</td>
+                        <td>sí</td>
+                    </tr>
+                    <tr>
+                        <td>Algodón</td>
+                        <td>Buzo</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>no</td>
+                        <td>no</td>
+                    </tr>
+                    <tr>
+                        <td>Lana</td>
+                        <td>Chaqueta</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>sí</td>
+                        <td>no</td>
+                    </tr>
+                    <tr>
+                        <td>Algodón</td>
+                        <td>Camiseta</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>no</td>
+                        <td>sí</td>
+                    </tr>
+                    <tr>
+                        <td>Algodón</td>
+                        <td>Camiseta</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>no</td>
+                        <td>sí</td>
+                    </tr>
+                    <tr>
+                        <td>Algodón</td>
+                        <td>Camiseta</td>
+                        <td>L</td>
+                        <td>13</td>
+                        <td>no</td>
+                        <td>sí</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
-
-
-
-
-
-

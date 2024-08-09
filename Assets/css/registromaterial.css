@@ -101,6 +101,11 @@
   button:hover {
     background-color: #1F355B;
   }
+
+  button a{
+    color: #ffffff;
+    text-decoration: none;
+  }
   
   
   

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Inventario de Telas</title>
     <style>
@@ -28,6 +28,7 @@
             color: var(--blanco);
             background-color: #f4f4f4;
             display: flex;
+            background-image: url('../Assets/img/proveedor.jpeg');
         }
 
         .menu-dashboard {
@@ -124,7 +125,7 @@
         }
 
         .social-media i:hover {
-            color: #1da1f2; /* Color más claro para resaltar al pasar el mouse */
+            color: #1da1f2; 
         }
 
         .content {
@@ -211,6 +212,11 @@
         table tr:nth-child(even) {
             background-color: #f9f9f9;
         }
+
+        .enlace a{
+            color: #fff;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -218,7 +224,7 @@
         <div>
             <div class="top-menu">
                 <div class="logo">
-                    <img src="/Assets/icons/WhatsApp_Image_2024-07-30_at_11.21.03_PM-removebg-preview.png" alt="">
+                    <img src="../Assets/icons/WhatsApp_Image_2024-07-30_at_11.21.03_PM-removebg-preview.png" alt="">
                     <span>Confecciones Textiles la Y</span>
                 </div>
                 <div class="toggle">
@@ -226,33 +232,30 @@
                 </div>
             </div>
             <div class="menu">
-                <div class="enlace">
-                    <i class="bx bx-grid-alt"></i>
-                    <span>Dashboard</span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-home"></i>
-                    <span>Inicio</span>
+                    <span><a href="index.html">Inicio</a></span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-collection"></i>
-                    <span>Inventario Telas</span>
+                    <span><a href="listaTelas.html">Telas</a></span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-receipt"></i>
-                    <span>Inventario Pedidos</span>
+                    <span><a href="pedidos.html">Pedidos</a></span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-user"></i>
-                    <span>Proveedores</span>
+                    <span><a href="listaproveedores.html">Proveedores</a></span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-file"></i>
-                    <span>Factura</span>
+                    <span><a href="factura.html">Factura</a></span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-log-out"></i>
-                    <span>Cerrar Sesión</span>
+                    <span><a href="login.html">login</a></span>
                 </div>
             </div>
         </div>
@@ -377,11 +380,11 @@
                     <td>25/07/2024</td>
                     <td>Almacén B2</td>
                 </tr>
-                <!-- Más filas de ejemplo pueden añadirse aquí -->
+               
             </tbody>
         </table>
 
-        <a href="#" class="add-button">Añadir Tela</a>
+        <a href="agregarTela.html" class="add-button">Añadir Tela</a>
     </div>
 
     <script>
@@ -414,9 +417,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="/Assets/css/listaproveedores.css">
+    <link rel="stylesheet" href="../Assets/css/listaproveedores.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Lista Proveedor</title>
@@ -126,13 +126,17 @@
         }
 
         .social-media i:hover {
-            color: #1da1f2; /* Color más claro para resaltar al pasar el mouse */
+            color: #1da1f2;
         }
         .content{
             height: 400px;
             width: 700px;
             padding: 150;
-        }      
+        }     
+        .enlace a{
+            color: #fff;
+            text-decoration: none;
+        } 
         
     </style>
 </head>
@@ -141,7 +145,7 @@
         <div>
             <div class="top-menu">
                 <div class="logo">
-                    <img src="/Assets/icons/WhatsApp_Image_2024-07-30_at_11.21.03_PM-removebg-preview.png" alt="">
+                    <img src="../Assets/icons/WhatsApp_Image_2024-07-30_at_11.21.03_PM-removebg-preview.png" alt="">
                     <span>Confecciones Textiles la Y</span>
                 </div>
                 <div class="toggle">
@@ -150,32 +154,24 @@
             </div>
             <div class="menu">
                 <div class="enlace">
-                    <i class="bx bx-grid-alt"></i>
-                    <span>Dashboard</span>
-                </div>
-                <div class="enlace">
                     <i class="bx bx-home"></i>
-                    <span>Inicio</span>
+                    <span><a href="index.html">Inicio</a></span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-collection"></i>
-                    <span>Inventario Telas</span>
+                    <span><a href="listaTelas.html">Telas</a></span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-receipt"></i>
-                    <span>Inventario Pedidos</span>
+                    <span><a href="pedidos.html">Pedidos</a></span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-user"></i>
-                    <span>Proveedores</span>
+                    <span><a href="listaproveedores.html">Proveedores</a></span>
                 </div>
                 <div class="enlace">
                     <i class="bx bx-file"></i>
-                    <span>Factura</span>
-                </div>
-                <div class="enlace">
-                    <i class="bx bx-log-out"></i>
-                    <span>Cerrar Sesión</span>
+                    <span><a href="factura.html">Factura</a></span>
                 </div>
             </div>
         </div>
@@ -228,6 +224,7 @@
                 </li>
                 <!-- Agrega más proveedores aquí -->
             </ul>
+            
         </section>
     </main>
    
