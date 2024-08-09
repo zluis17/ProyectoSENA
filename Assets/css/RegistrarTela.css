@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+=======
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+>>>>>>> 5fb8768b67af438cfdf4e7480d0b16c9cf3cc83c
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +17,14 @@ body {
     align-items: center;
     height: 100vh;
     padding: 20px;
+<<<<<<< HEAD
     background-image: url(../img/proveedor.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+=======
+>>>>>>> 5fb8768b67af438cfdf4e7480d0b16c9cf3cc83c
 }
 
 .sidebar {
@@ -82,7 +89,14 @@ body {
 }
 
 .main-container {
+<<<<<<< HEAD
     background-color: #fff;
+=======
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://fashionunited.com/r/fit=cover,format=auto,gravity=center,height=926,quality=70,width=1388/https://static.fashionunited.com/201710/ttejidossostenibles1.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+>>>>>>> 5fb8768b67af438cfdf4e7480d0b16c9cf3cc83c
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300%;
@@ -102,18 +116,28 @@ h2 {
     font-size: 24px;
     color: #000000;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5fb8768b67af438cfdf4e7480d0b16c9cf3cc83c
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+<<<<<<< HEAD
     color: #000000;
+=======
+>>>>>>> 5fb8768b67af438cfdf4e7480d0b16c9cf3cc83c
 }
 
 .form-group input {
     width: 100%;
     padding: 8px;
+<<<<<<< HEAD
     border: 1px solid #000000;
+=======
+    border: 1px solid #ccc;
+>>>>>>> 5fb8768b67af438cfdf4e7480d0b16c9cf3cc83c
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -154,4 +178,8 @@ button {
 
 button:hover {
     background-color: #1E5393;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5fb8768b67af438cfdf4e7480d0b16c9cf3cc83c
